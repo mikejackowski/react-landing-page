@@ -7,8 +7,9 @@ import Demo from "./Icons/Demo";
 const Section = styled.section`
   padding: 30px 0 225px;
 `;
+
 const SectionTitle = styled.h2`
-  font-size: 26px;
+  font-size: 3em;
   font-weight: 300;
   line-height: normal;
   color: #1b5cce;
@@ -86,20 +87,17 @@ const About = () => {
   return (
     <Section id="about">
       <div className="container">
-        <SectionTitle>Lorem ipsum dolor sit amet</SectionTitle>
-        <SubTitle>Lorem ipsum dolor sit amet</SubTitle>
+        <SectionTitle>Make your advertising effective</SectionTitle>
+        <SubTitle>Access ASD database to make informed choices</SubTitle>
         <div className="row">
           <div className="col-lg-4">
             <Box data-aos={width >= 1400 ? "fade-right" : "fade-up"}>
               <IconWrap>
                 <Demo />
               </IconWrap>
-              <BoxTitle>Declarative</BoxTitle>
+              <BoxTitle>Curated</BoxTitle>
               <Text>
-                React makes it painless to create interactive UIs. Design simple
-                views for each state in your application, and React will
-                efficiently update and render just the right components when
-                your data changes.
+                Audience data that you always wanted. Make use of your taget customer persona and hit the bullseye with your marketing efforts.
               </Text>
             </Box>
           </div>
@@ -108,11 +106,10 @@ const About = () => {
               <IconWrap>
                 <Demo />
               </IconWrap>
-              <BoxTitle>Component-Based</BoxTitle>
+              <BoxTitle>Relevant</BoxTitle>
               <Text>
-                Since component logic is written in JavaScript instead of
-                templates, you can easily pass rich data through your app and
-                keep state out of the DOM.
+                Generic ads are in decline. Personalized marketing is the future.
+                Your target audience matters, and we will help you reach the people who really wants your product.
               </Text>
             </Box>
           </div>
@@ -121,11 +118,11 @@ const About = () => {
               <IconWrap>
                 <Demo />
               </IconWrap>
-              <BoxTitle>Learn Once, Write Anywhere</BoxTitle>
+              <BoxTitle>Highly customizable</BoxTitle>
               <Text>
-                We don’t make assumptions about the rest of your technology
-                stack, so you can develop new features in React without
-                rewriting existing code.
+                Use our dashboard to get access to the right streamers with right audience.
+                Filter and find the right viewer profile. Get in touch with the right streamers. Track their channels growth.
+                All in one place.
               </Text>
             </Box>
           </div>

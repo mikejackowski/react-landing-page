@@ -2,13 +2,12 @@ import React from "react";
 
 import styled from "styled-components";
 
-import Arrow from "./Icons/Arrow";
 import bgImg from "../assets/img/bg-home.jpg";
 
 const Section = styled.section`
   position: relative;
-  padding-top: 138px;
-  padding-bottom: 288px;
+  padding-top: 69px;
+  padding-bottom: 144px;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -41,8 +40,8 @@ const Section = styled.section`
   @media (min-width: 992px) {
     padding-left: 110px;
     padding-right: 110px;
-    padding-top: 279px;
-    padding-bottom: 111px;
+    padding-top: 144px;
+    padding-bottom: 55px;
   }
 
   .container {
@@ -68,7 +67,7 @@ const BgOverlay = styled.div`
   }
 `;
 
-const HomeTitle = styled.h1`
+const LogoWrapper = styled.h1`
   font-weight: 300;
   text-align: center;
   color: #fff;
@@ -86,54 +85,41 @@ const HomeTitle = styled.h1`
   }
 `;
 
-const SubTitle = styled.h5`
-  font-size: 12px;
+const SubTitle = styled.h3`
+  padding-top: 20px;
+  font-size: 20px;
   font-weight: normal;
   line-height: 1.83;
   text-align: center;
   color: #ffffff;
 
   @media (min-width: 992px) {
-    max-width: 385px;
+    max-width: 60%;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 49px;
+    margin-bottom: 19px;
   }
 `;
 
-const Box = styled.div`
-  width: 105px;
-  height: 105px;
-  border: 15px solid #fb434b;
-  margin-left: auto;
-  margin-right: auto;
-  position: relative;
-`;
+const Logo = styled.img`
+  max-height: 100px;
+`
 
 const Home = () => {
   return (
     <Section id="home">
       <BgOverlay />
       <div className="container">
-        <HomeTitle data-aos="zoom-in">
-          It is a long established fact that a reader will be distracted by the
-          readable content of a page when looking at its layout.
-        </HomeTitle>
+        <LogoWrapper data-aos="zoom-in">
+          <Logo src='https://brand.twitch.tv/assets/logos/svg/wordmark-extruded/purple.svg'/>
+        </LogoWrapper>
         <SubTitle
           data-aos="fade-up"
           data-aos-easing="ease"
           data-aos-delay="400"
         >
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry.
+          ASD connects brands and streamers the right way.
         </SubTitle>
-        {/* <Box data-aos="fade-up" data-aos-easing="ease" data-aos-delay="800">
-          <Arrow
-            data-aos="fade-up"
-            data-aos-easing="ease"
-            data-aos-delay="1200"
-          />
-        </Box> */}
       </div>
     </Section>
   );

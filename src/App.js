@@ -1,16 +1,19 @@
-import React, { useEffect, Fragment } from "react";
+import React, { useState, useEffect, Fragment } from "react";
 import AOS from "aos";
 import $ from "jquery";
 
 import Header from "./components/Header";
 import Home from "./components/Home";
-import About from "./components/About";
+import Brands from "./components/Brands";
 import Contact from "./components/Contact";
 
 import "aos/dist/aos.css";
 import "./assets/styles/main.scss";
+import About from "./components/Brands";
+import Streamers from "./components/Streamers";
 
 const App = () => {
+  const [selectedLayout, setSelectedLayout] = useState('basic')
   useEffect(() => {
     AOS.init({ once: true });
 
@@ -30,10 +33,17 @@ const App = () => {
 
   return (
     <Fragment>
-      <Header />
+      <Header
+       selectedLayout={selectedLayout}
+       setSelectedLayout={setSelectedLayout}/>
       <main>
         <Home />
-        <About />
+        {selectedLayout === 'basic' &&
+        <About />}
+        {selectedLayout === 'streamer' &&
+        <Streamers />}
+        {selectedLayout === 'brand' &&
+        <Brands />}
         <Contact />
       </main>
     </Fragment>
