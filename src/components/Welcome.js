@@ -82,22 +82,22 @@ const Text = styled.p`
   max-width: 350px;
 `;
 
-const About = () => {
+const Welcome = () => {
   const width = window.innerWidth;
   return (
-    <Section id="about">
+    <Section id="Welcome">
       <div className="container">
-        <SectionTitle>Make your advertising effective</SectionTitle>
-        <SubTitle>Access ASD database to make informed choices</SubTitle>
+        <SectionTitle>Find the right match</SectionTitle>
+        <SubTitle>Finding the right business partner to work is crucial.</SubTitle>
         <div className="row">
           <div className="col-lg-4">
             <Box data-aos={width >= 1400 ? "fade-right" : "fade-up"}>
               <IconWrap>
                 <Demo />
               </IconWrap>
-              <BoxTitle>Curated</BoxTitle>
+              <BoxTitle>Effective</BoxTitle>
               <Text>
-                Audience data that you always wanted. Make use of your taget customer persona and hit the bullseye with your marketing efforts.
+                TwichZoom takes the guessing out of the equasion. No more assumptions, no more innacurate campaigns.
               </Text>
             </Box>
           </div>
@@ -106,10 +106,9 @@ const About = () => {
               <IconWrap>
                 <Demo />
               </IconWrap>
-              <BoxTitle>Relevant</BoxTitle>
+              <BoxTitle>Personalization</BoxTitle>
               <Text>
-                Generic ads are in decline. Personalized marketing is the future.
-                Your target audience matters, and we will help you reach the people who really wants your product.
+                No more misses and underlivered promises. With TwitchZoom both sides of the deal can see the big picture and make the right decision.
               </Text>
             </Box>
           </div>
@@ -132,4 +131,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default Welcome;

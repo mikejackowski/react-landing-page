@@ -9,11 +9,11 @@ import Contact from "./components/Contact";
 
 import "aos/dist/aos.css";
 import "./assets/styles/main.scss";
-import About from "./components/Brands";
+import Welcome from "./components/Welcome";
 import Streamers from "./components/Streamers";
 
 const App = () => {
-  const [selectedLayout, setSelectedLayout] = useState('basic')
+  const [selectedLayout, setSelectedLayout] = useState('welcome')
   useEffect(() => {
     AOS.init({ once: true });
 
@@ -38,8 +38,8 @@ const App = () => {
        setSelectedLayout={setSelectedLayout}/>
       <main>
         <Home />
-        {selectedLayout === 'basic' &&
-        <About />}
+        {selectedLayout === 'welcome' &&
+        <Welcome />}
         {selectedLayout === 'streamer' &&
         <Streamers />}
         {selectedLayout === 'brand' &&

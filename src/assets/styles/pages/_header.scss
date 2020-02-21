@@ -1,13 +1,9 @@
 .fixed-top {
   position: fixed;
+  top: 0;
   right: 0;
   left: 0;
   z-index: 1030;
-  top: 50px;
-
-  @media (min-width: 992px) {
-    top: 25px;
-  }
 }
 
 .navbar {
@@ -25,7 +21,7 @@
     height: auto !important;
 
     @media (max-width: 991px) {
-      background: $color-black;
+      // background: $color-black;
       padding: 20px;
       padding-top: 83px;
       position: fixed;
@@ -143,6 +139,7 @@
       transition: all 0.3s ease-in-out 0s;
     }
 
+
     &:hover,
     &.active {
       &:after {
@@ -179,27 +176,12 @@
     top: 0;
     background-color: #fff;
     box-shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.14);
-    padding: 15px 0;
-
-    .navbar-collapse {
-      @media (max-width: 991px) {
-        padding-top: 63px;
-      }
-    }
-
-    .navbar-toggler {
-      >span {
-        background-color: $color-black;
-      }
-    }
   }
 
   @media (min-width: 992px) {
     flex-wrap: nowrap;
-    padding: 25px 0;
 
     &.sticky {
-      padding: 19px 0px 18px 0;
       top: 0;
 
       .nav-link {

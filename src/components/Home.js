@@ -6,13 +6,12 @@ import bgImg from "../assets/img/bg-home.jpg";
 
 const Section = styled.section`
   position: relative;
-  padding-top: 69px;
-  padding-bottom: 144px;
+  padding-top: 169px;
+  padding-bottom: 70px;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  background-image: url(${bgImg});
 
   &:after,
   &:before {
@@ -52,7 +51,8 @@ const Section = styled.section`
 `;
 
 const BgOverlay = styled.div`
-  background: linear-gradient(33deg, #8400ff, #413bff);
+  background-color: #ffffff;
+  background-image: linear-gradient(315deg, #ffffff 0%, #d7e1ec 74%);
   opacity: 0.9;
   position: absolute;
   height: 100%;
@@ -63,7 +63,7 @@ const BgOverlay = styled.div`
   top: 0;
 
   @media (min-width: 992px) {
-    background-image: linear-gradient(62deg, #8400ff, #413bff);
+    background-image: linear-gradient(315deg, #ffffff 0%, #d7e1ec 74%);
   }
 `;
 
@@ -91,10 +91,10 @@ const SubTitle = styled.h3`
   font-weight: normal;
   line-height: 1.83;
   text-align: center;
-  color: #ffffff;
+  color: #007bff;
 
   @media (min-width: 992px) {
-    max-width: 60%;
+    max-width: 80%;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 19px;
@@ -118,7 +118,7 @@ const Home = () => {
           data-aos-easing="ease"
           data-aos-delay="400"
         >
-          ASD connects brands and streamers the right way.
+          No more guessing. TwitchZoom connect brands and streamers the right way.
         </SubTitle>
       </div>
     </Section>

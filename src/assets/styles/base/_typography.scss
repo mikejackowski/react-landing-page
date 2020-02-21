@@ -10,11 +10,13 @@ body {
 
 a,
 a:hover {
+  color: unset;
   text-decoration: none;
 }
 
 @media (max-width: 991px) {
   .container {
+    padding-top: 50px;
     padding-left: 20px;
     padding-right: 20px;
     min-width: 100%;

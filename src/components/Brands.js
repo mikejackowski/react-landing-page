@@ -95,7 +95,7 @@ const Brands = () => {
               <IconWrap>
                 <Demo />
               </IconWrap>
-              <BoxTitle>Curated</BoxTitle>
+              <BoxTitle>Right streamers with right audience</BoxTitle>
               <Text>
                 Audience data that you always wanted. Make use of your taget customer persona and hit the bullseye with your marketing efforts.
               </Text>
