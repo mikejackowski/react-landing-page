@@ -7,7 +7,7 @@ import Demo from "./Icons/Demo";
 const Section = styled.section`
   width: 100%;
   height: 100%;
-  margin-top: 30px;
+  margin: 30px 0;
 `;
 
 const SectionTitle = styled.h2`
@@ -77,7 +77,7 @@ const Brands = () => {
   const width = window.innerWidth;
   return (
     <Section id="brands">
-      <div className="container">
+      <div>
         <SectionTitle>Make your advertising effective</SectionTitle>
         <div className="row">
           <div className="col-lg-4">

@@ -18,13 +18,27 @@ const HeaderWrapper = styled.header`
   width: 100%;
   height: 60px;
   min-height: fit-content;
+  max-width: 100vw;
 `
 
 const ButtonWrapper = styled.div`
-  display: flex;
-  width: 100%;
-  justify-content: center;
-  align-items: center;
+  display: none;
+  @media screen and (min-width: 500px) {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+`
+
+const SmButtonWrapper = styled.div`
+  display: none;
+  @media (max-width: 500px) {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
 `
 
 const Header = (props) => {
@@ -47,7 +61,7 @@ const Header = (props) => {
       data-aos-easing="ease"
       data-aos-delay="100"
       >
-      <Navbar bg="light" expand="lg" fixed="top">
+      <Navbar bg="light" expand="md" fixed="top">
         <NavBarWrapper>
           <Navbar.Brand
             href="#home"
@@ -60,7 +74,7 @@ const Header = (props) => {
             <Button
               style={{marginRight: '10px'}}
               variant={selectedLayout === 'brand' ? 'primary' : 'outline-primary'}
-              size="lg"
+              size={"lg"}
               onClick={() => setSelectedLayout('brand')}
             >
               Brands
@@ -73,6 +87,23 @@ const Header = (props) => {
               Streamers
             </Button>
           </ButtonWrapper>
+          <SmButtonWrapper>
+            <Button
+              style={{marginRight: '10px'}}
+              variant={selectedLayout === 'brand' ? 'primary' : 'outline-primary'}
+              size={"sm"}
+              onClick={() => setSelectedLayout('brand')}
+            >
+              Brands
+            </Button>
+            <Button
+              variant={selectedLayout === 'streamer' ? 'primary' : 'outline-primary'}
+              size="sm"
+              onClick={() => setSelectedLayout('streamer')}
+            >
+              Streamers
+            </Button>
+          </SmButtonWrapper>
           <div id="basic-navbar-nav">
             <Nav>
               <Button

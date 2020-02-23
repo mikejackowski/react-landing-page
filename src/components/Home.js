@@ -90,12 +90,16 @@ const HeroWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media screen and (max-width: 500px) {
+    flex-wrap: wrap;
+  }
 `
 
 const Home = () => {
   return (
     <Section id="home">
-        <HeroWrapper className="container">
+        <HeroWrapper>
           <LogoWrapper data-aos="zoom-in">
             <Logo src='https://brand.twitch.tv/assets/logos/svg/wordmark-extruded/purple.svg'/>
           </LogoWrapper>

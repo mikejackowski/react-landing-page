@@ -7,12 +7,7 @@ import Demo from "./Icons/Demo";
 const Section = styled.section`
   width: 100%;
   height: 100%;
-  margin-top: 30px;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  background-image: linear-gradient(315deg, #007bff 20%, #f5f7f6 74%);
+  margin: 30px 0;
 `;
 
 const SectionTitle = styled.h2`
@@ -63,14 +58,14 @@ const IconWrap = styled.div`
 `;
 
 const BoxTitle = styled.h4`
-  font-size: 18px;
+  font-size: 24px;
   font-weight: 300;
   line-height: normal;
   color: #5273c7;
 `;
 
 const Text = styled.p`
-  font-size: 12px;
+  font-size: 18px;
   font-weight: normal;
   line-height: 1.58;
   color: #8f8f8f;
@@ -82,7 +77,7 @@ const Streamers = () => {
   const width = window.innerWidth;
   return (
     <Section id="streamers">
-      <div className="container">
+      <div>
         <SectionTitle>Find the right opportunities</SectionTitle>
         <div className="row">
           <div className="col-lg-4">

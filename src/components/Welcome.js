@@ -50,7 +50,7 @@ const Welcome = (props) => {
       <WelcomeWrapper>
         <SectionTitle>Data-driven marketing is the future</SectionTitle>
         <ProductDescription>
-          StreamZoom allows streamers to learn more about their viewers' profile. We collect key metrics and build a detailed profile.
+          <b>StreamZoom</b> allows streamers to learn more about their viewers' profile. We collect key metrics and build a detailed profile.
         </ProductDescription>
         <ProductDescription style={{ paddingTop: '0'}}>
           Knowing and understanding users is key to running effective ad campaigns.
