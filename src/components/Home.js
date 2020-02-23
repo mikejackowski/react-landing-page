@@ -6,12 +6,21 @@ import bgImg from "../assets/img/bg-home.jpg";
 
 const Section = styled.section`
   position: relative;
-  padding-top: 169px;
+  padding-top: 70px;
   padding-bottom: 70px;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
+  background-color: #ffffff;
+  background-image: linear-gradient(315deg, #ffffff 0%, #d7e1ec 74%);
+  opacity: 0.9;
+  height: fit-content;
+  width: 100%;
+  @media (min-width: 992px) {
+    background-image: linear-gradient(315deg, #ffffff 0%, #d7e1ec 74%);
+  }
+  box-sizing: border-box;
 
   &:after,
   &:before {
@@ -39,31 +48,14 @@ const Section = styled.section`
   @media (min-width: 992px) {
     padding-left: 110px;
     padding-right: 110px;
-    padding-top: 144px;
-    padding-bottom: 55px;
+    padding-top: 90px;
+    padding-bottom: 70px;
   }
 
   .container {
     z-index: 1;
     user-select: none;
     cursor: default;
-  }
-`;
-
-const BgOverlay = styled.div`
-  background-color: #ffffff;
-  background-image: linear-gradient(315deg, #ffffff 0%, #d7e1ec 74%);
-  opacity: 0.9;
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  top: 0;
-
-  @media (min-width: 992px) {
-    background-image: linear-gradient(315deg, #ffffff 0%, #d7e1ec 74%);
   }
 `;
 
@@ -74,53 +66,55 @@ const LogoWrapper = styled.h1`
   font-size: 22px;
   line-height: 1.55;
   margin-bottom: 23px;
+  margin-right: 2%;
 
   @media (min-width: 992px) {
     font-size: 38px;
     line-height: 1.39;
     max-width: 1100px;
-    margin-left: auto;
-    margin-right: auto;
     margin-bottom: 0;
   }
 `;
 
 const SubTitle = styled.h3`
-  padding-top: 20px;
-  font-size: 20px;
+  max-width: 50%;
+  font-size: 22px;
   font-weight: normal;
   line-height: 1.83;
-  text-align: center;
-  color: #007bff;
+  text-align: left;
+  color: #343a40;
 
   @media (min-width: 992px) {
-    max-width: 80%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 19px;
+    max-width: 50%;
   }
 `;
 
 const Logo = styled.img`
   max-height: 100px;
+  padding: 10px;
+`
+
+const HeroWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `
 
 const Home = () => {
   return (
     <Section id="home">
-      <BgOverlay />
-      <div className="container">
-        <LogoWrapper data-aos="zoom-in">
-          <Logo src='https://brand.twitch.tv/assets/logos/svg/wordmark-extruded/purple.svg'/>
-        </LogoWrapper>
-        <SubTitle
-          data-aos="fade-up"
-          data-aos-easing="ease"
-          data-aos-delay="400"
-        >
-          No more guessing. TwitchZoom connect brands and streamers the right way.
-        </SubTitle>
-      </div>
+        <HeroWrapper className="container">
+          <LogoWrapper data-aos="zoom-in">
+            <Logo src='https://brand.twitch.tv/assets/logos/svg/wordmark-extruded/purple.svg'/>
+          </LogoWrapper>
+          <SubTitle
+            data-aos="fade-up"
+            data-aos-easing="ease"
+            data-aos-delay="400"
+          >
+            <b>StreamZoom</b> connect brands and streamers based on viewer profile, creating effective and successful partnerships.
+          </SubTitle>
+        </HeroWrapper>
     </Section>
   );
 };

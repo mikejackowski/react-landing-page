@@ -5,7 +5,9 @@ import styled from "styled-components";
 import Demo from "./Icons/Demo";
 
 const Section = styled.section`
-  padding: 30px 0 225px;
+  width: 100%;
+  height: 100%;
+  margin-top: 30px;
 `;
 
 const SectionTitle = styled.h2`
@@ -67,14 +69,14 @@ const IconWrap = styled.div`
 `;
 
 const BoxTitle = styled.h4`
-  font-size: 18px;
+  font-size: 24px;
   font-weight: 300;
   line-height: normal;
   color: #5273c7;
 `;
 
 const Text = styled.p`
-  font-size: 12px;
+  font-size: 18px;
   font-weight: normal;
   line-height: 1.58;
   color: #8f8f8f;
@@ -106,10 +108,10 @@ const Brands = () => {
               <IconWrap>
                 <Demo />
               </IconWrap>
-              <BoxTitle>Relevant</BoxTitle>
+              <BoxTitle>Key metrics</BoxTitle>
               <Text>
                 Generic ads are in decline. Personalized marketing is the future.
-                Your target audience matters, and we will help you reach the people who really wants your product.
+                Use our 7 key metrics to find the right streamers for your product.
               </Text>
             </Box>
           </div>

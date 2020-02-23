@@ -1,4 +1,4 @@
-import React, { useState, useEffect, Fragment } from "react";
+import React, { useState, useEffect } from "react";
 import AOS from "aos";
 import $ from "jquery";
 
@@ -11,6 +11,23 @@ import "aos/dist/aos.css";
 import "./assets/styles/main.scss";
 import Welcome from "./components/Welcome";
 import Streamers from "./components/Streamers";
+import styled from 'styled-components';
+
+const AppWrapper = styled.div`
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 1fr;
+`;
+
+
+const MainWrapper = styled.main`
+  display: grid;
+  width: 100%;
+  height: 100%;
+  grid-template-rows: auto 1fr auto;
+`
+
 
 const App = () => {
   const [selectedLayout, setSelectedLayout] = useState('welcome')
@@ -32,21 +49,28 @@ const App = () => {
   });
 
   return (
-    <Fragment>
-      <Header
-       selectedLayout={selectedLayout}
-       setSelectedLayout={setSelectedLayout}/>
-      <main>
+    <AppWrapper>
+      {
+      selectedLayout !== 'welcome' &&
+        <Header
+        data-aos="fade-up"
+        selectedLayout={selectedLayout}
+        setSelectedLayout={setSelectedLayout}/>
+      }
+      <MainWrapper>
         <Home />
         {selectedLayout === 'welcome' &&
-        <Welcome />}
+        <Welcome
+          selectedLayout={selectedLayout}
+          setSelectedLayout={setSelectedLayout}/>
+        }
         {selectedLayout === 'streamer' &&
         <Streamers />}
         {selectedLayout === 'brand' &&
         <Brands />}
         <Contact />
-      </main>
-    </Fragment>
+      </MainWrapper>
+    </AppWrapper>
   );
 };
 

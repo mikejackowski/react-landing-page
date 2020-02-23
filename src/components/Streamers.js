@@ -5,7 +5,9 @@ import styled from "styled-components";
 import Demo from "./Icons/Demo";
 
 const Section = styled.section`
-  padding: 30px 0 225px;
+  width: 100%;
+  height: 100%;
+  margin-top: 30px;
 `;
 
 const SectionTitle = styled.h2`
