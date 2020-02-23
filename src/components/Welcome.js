@@ -10,12 +10,22 @@ const Section = styled.section`
 `
 
 const SectionTitle = styled.h2`
-  font-size: 3em;
-  font-weight: 300;
+  font-size: 1.8em;
+  font-weight: 400;
+  letter-spacing: 0.02em;
   line-height: normal;
   color: #1b5cce;
   text-align: center;
-  margin-bottom: 2px;
+`
+
+const ProductDescription = styled.div`
+  font-size: 1em;
+  width: 70%;
+  font-weight: 300;
+  letter-spacing: 0.02em;
+  line-height: normal;
+  text-align: justify;
+  padding: 2% 0;
 `
 
 const ButtonWrapper = styled.div`
@@ -23,17 +33,32 @@ const ButtonWrapper = styled.div`
   display: flex;
   width: 100%;
   margin: 20px 0;
-
   justify-content: center;
   align-items: center;
 `
 
+const WelcomeWrapper = styled.div`
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  flex-wrap: wrap;
+`
 const Welcome = (props) => {
   const { selectedLayout, setSelectedLayout } = props;
   return (
     <Section id="Welcome">
-      <div className="container">
-        <SectionTitle>Effective partnerships for:</SectionTitle>
+      <WelcomeWrapper>
+        <SectionTitle>Data-driven marketing is the future</SectionTitle>
+        <ProductDescription>
+          StreamZoom allows streamers to learn more about their viewers' profile. We collect key metrics and build a detailed profile.
+        </ProductDescription>
+        <ProductDescription style={{ paddingTop: '0'}}>
+          Knowing and understanding users is key to running effective ad campaigns.
+          Find the right partner and target the right audience.
+        </ProductDescription>
+        <ProductDescription style={{textAlign: 'center', paddingBottom: '1%'}}>
+          We are working with:
+        </ProductDescription>
         <ButtonWrapper>
           <Button
             style={{marginRight: '10px'}}
@@ -49,7 +74,7 @@ const Welcome = (props) => {
               Streamers
           </Button>
         </ButtonWrapper>
-      </div>
+      </WelcomeWrapper>
     </Section>
   );
 };

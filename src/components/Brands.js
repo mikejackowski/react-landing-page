@@ -11,25 +11,14 @@ const Section = styled.section`
 `;
 
 const SectionTitle = styled.h2`
-  font-size: 3em;
-  font-weight: 300;
+  font-size: 1.8em;
+  font-weight: 400;
+  letter-spacing: 0.02em;
   line-height: normal;
   color: #1b5cce;
   text-align: center;
-  margin-bottom: 2px;
-`;
-
-const SubTitle = styled.h5`
-  font-size: 14px;
-  font-weight: normal;
-  line-height: normal;
-  text-align: center;
-  color: #aeaeae;
-  margin-bottom: 25px;
-  @media (min-width: 992px) {
-    margin-bottom: 50px;
-  }
-`;
+  margin-bottom: 2%;
+`
 
 const Box = styled.div`
   display: flex;
@@ -90,7 +79,6 @@ const Brands = () => {
     <Section id="brands">
       <div className="container">
         <SectionTitle>Make your advertising effective</SectionTitle>
-        <SubTitle>Access ASD database to make informed choices</SubTitle>
         <div className="row">
           <div className="col-lg-4">
             <Box data-aos={width >= 1400 ? "fade-right" : "fade-up"}>
@@ -99,7 +87,7 @@ const Brands = () => {
               </IconWrap>
               <BoxTitle>Right streamers with right audience</BoxTitle>
               <Text>
-                Audience data that you always wanted. Make use of your taget customer persona and hit the bullseye with your marketing efforts.
+                Stop guessing and start using our data to find right patners for your marketing effrots.
               </Text>
             </Box>
           </div>
@@ -108,10 +96,9 @@ const Brands = () => {
               <IconWrap>
                 <Demo />
               </IconWrap>
-              <BoxTitle>Key metrics</BoxTitle>
+              <BoxTitle>Use real data</BoxTitle>
               <Text>
-                Generic ads are in decline. Personalized marketing is the future.
-                Use our 7 key metrics to find the right streamers for your product.
+                Leverage 7 key metrics to find streamers with right audience for your product.
               </Text>
             </Box>
           </div>
@@ -120,11 +107,9 @@ const Brands = () => {
               <IconWrap>
                 <Demo />
               </IconWrap>
-              <BoxTitle>Highly customizable</BoxTitle>
+              <BoxTitle>Effective</BoxTitle>
               <Text>
-                Use our dashboard to get access to the right streamers with right audience.
-                Filter and find the right viewer profile. Get in touch with the right streamers. Track their channels growth.
-                All in one place.
+                Get in contact with the streamers, track their channel statistics, measure your campaign effects.
               </Text>
             </Box>
           </div>

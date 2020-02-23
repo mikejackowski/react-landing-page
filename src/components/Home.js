@@ -8,19 +8,11 @@ const Section = styled.section`
   position: relative;
   padding-top: 70px;
   padding-bottom: 70px;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  background-color: #ffffff;
-  background-image: linear-gradient(315deg, #ffffff 0%, #d7e1ec 74%);
   opacity: 0.9;
   height: fit-content;
   width: 100%;
-  @media (min-width: 992px) {
-    background-image: linear-gradient(315deg, #ffffff 0%, #d7e1ec 74%);
-  }
   box-sizing: border-box;
+  background-color: #f6f6f6;
 
   &:after,
   &:before {
@@ -63,13 +55,13 @@ const LogoWrapper = styled.h1`
   font-weight: 300;
   text-align: center;
   color: #fff;
-  font-size: 22px;
+  font-size: 1em;
   line-height: 1.55;
   margin-bottom: 23px;
   margin-right: 2%;
 
   @media (min-width: 992px) {
-    font-size: 38px;
+    font-size: 1.5em;
     line-height: 1.39;
     max-width: 1100px;
     margin-bottom: 0;
@@ -77,15 +69,15 @@ const LogoWrapper = styled.h1`
 `;
 
 const SubTitle = styled.h3`
-  max-width: 50%;
-  font-size: 22px;
+  max-width: 70%;
+  font-size: 1.2em;
   font-weight: normal;
   line-height: 1.83;
   text-align: left;
   color: #343a40;
 
   @media (min-width: 992px) {
-    max-width: 50%;
+    max-width: 70%;
   }
 `;
 
