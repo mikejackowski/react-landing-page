@@ -11,13 +11,14 @@ const Section = styled.section`
 `;
 
 const SectionTitle = styled.h2`
+  width: 100%;
+  margin: 0 auto 2%;
   font-size: 1.8em;
   font-weight: 400;
   letter-spacing: 0.02em;
   line-height: normal;
   color: #1b5cce;
   text-align: center;
-  margin-bottom: 2%;
 `
 
 const Box = styled.div`

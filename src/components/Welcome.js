@@ -16,6 +16,7 @@ const SectionTitle = styled.h2`
   line-height: normal;
   color: #1b5cce;
   text-align: center;
+  width: 100%;
 `
 
 const ProductDescription = styled.div`

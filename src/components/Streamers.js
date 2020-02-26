@@ -17,7 +17,8 @@ const SectionTitle = styled.h2`
   line-height: normal;
   color: #1b5cce;
   text-align: center;
-  margin-bottom: 2%;
+  width: 100%;
+  margin: 0 auto 2%;
 `
 
 const Box = styled.div`
