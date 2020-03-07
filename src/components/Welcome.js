@@ -1,22 +1,8 @@
 import React from "react"
 
+import { Section, SectionTitle } from './Streamers';
 import styled from "styled-components"
 import Button from 'react-bootstrap/Button'
-
-const Section = styled.section`
-  height: 100%;
-  width: 100%;
-  margin-top: 30px;
-`
-
-const SectionTitle = styled.h2`
-  font-size: 1.8em;
-  font-weight: 400;
-  letter-spacing: 0.02em;
-  line-height: normal;
-  color: #1b5cce;
-  text-align: center;
-`
 
 const ProductDescription = styled.div`
   font-size: 1em;

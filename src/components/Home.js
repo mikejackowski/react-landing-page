@@ -2,8 +2,6 @@ import React from "react";
 
 import styled from "styled-components";
 
-import bgImg from "../assets/img/bg-home.jpg";
-
 const Section = styled.section`
   position: relative;
   padding-top: 70px;
@@ -12,7 +10,8 @@ const Section = styled.section`
   height: fit-content;
   width: 100%;
   box-sizing: border-box;
-  background-color: #f6f6f6;
+  /* background: linear-gradient(to top, rgba(253, 253, 253, 0.3) 0%, rgba(193, 218, 255, 0.3) 100%); */
+  background: linear-gradient(to top, rgba(193, 218, 255, 0.3) 0%, rgba(253, 253, 253, 0.3) 100%);
 
   &:after,
   &:before {
@@ -68,6 +67,19 @@ const LogoWrapper = styled.h1`
   }
 `;
 
+const Title = styled.h2`
+  max-width: 70%;
+  font-size: 1.2em;
+  font-weight: normal;
+  line-height: 1.83;
+  text-align: left;
+  color: black;
+
+  @media (min-width: 992px) {
+    max-width: 70%;
+  }
+`
+
 const SubTitle = styled.h3`
   max-width: 70%;
   font-size: 1.2em;
@@ -103,12 +115,19 @@ const Home = () => {
           <LogoWrapper data-aos="zoom-in">
             <Logo src='https://brand.twitch.tv/assets/logos/svg/wordmark-extruded/purple.svg'/>
           </LogoWrapper>
+          <Title
+            data-aos="fade-up"
+            data-aos-easing="ease"
+            data-aos-delay="400"
+          >
+            stream<b>zoom</b>.io
+          </Title>
           <SubTitle
             data-aos="fade-up"
             data-aos-easing="ease"
             data-aos-delay="400"
           >
-            <b>StreamZoom</b> connect brands and streamers based on viewer profile, creating effective and successful partnerships.
+            We're connecting streamers and advertisers the right way.
           </SubTitle>
         </HeroWrapper>
     </Section>

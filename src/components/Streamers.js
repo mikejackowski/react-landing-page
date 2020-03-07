@@ -4,13 +4,38 @@ import styled from "styled-components";
 
 import Demo from "./Icons/Demo";
 
-const Section = styled.section`
+export const Section = styled.section`
+  position: relative;
   width: 100%;
   height: 100%;
   margin: 30px 0;
+  background: #fff;
+
+  &:after,
+  &:before {
+    content: "";
+    width: 0;
+    height: 0;
+    position: absolute;
+    bottom: -1px;
+    border-bottom: 10px solid #f6f6f6;
+    z-index: 2;
+  }
+
+  &:before {
+    left: 0;
+    border-right: 12px solid transparent;
+    border-left: calc(50vw - 12px) solid #f6f6f6;
+  }
+
+  &:after {
+    right: 0;
+    border-left: 12px solid transparent;
+    border-right: calc(50vw - 12px) solid #f6f6f6;
+  }
 `;
 
-const SectionTitle = styled.h2`
+export const SectionTitle = styled.h2`
   font-size: 1.8em;
   font-weight: 400;
   letter-spacing: 0.02em;
@@ -20,7 +45,7 @@ const SectionTitle = styled.h2`
   margin-bottom: 2%;
 `
 
-const Box = styled.div`
+export const Box = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -35,7 +60,7 @@ const Box = styled.div`
   }
 `;
 
-const IconWrap = styled.div`
+export const IconWrap = styled.div`
   width: 150px;
   height: 150px;
   border-radius: 150px;
@@ -57,14 +82,14 @@ const IconWrap = styled.div`
   }
 `;
 
-const BoxTitle = styled.h4`
+export const BoxTitle = styled.h4`
   font-size: 24px;
   font-weight: 300;
   line-height: normal;
   color: #5273c7;
 `;
 
-const Text = styled.p`
+export const Text = styled.p`
   font-size: 18px;
   font-weight: normal;
   line-height: 1.58;

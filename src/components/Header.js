@@ -7,11 +7,10 @@ import Button from 'react-bootstrap/Button'
 import styled from 'styled-components'
 
 const NavBarWrapper = styled.div`
-  display: grid;
+  display: flex;
   width: 100%;
-  grid-template-columns: 2fr 5fr 2fr;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
 `
 
 const HeaderWrapper = styled.header`
@@ -21,28 +20,7 @@ const HeaderWrapper = styled.header`
   max-width: 100vw;
 `
 
-const ButtonWrapper = styled.div`
-  display: none;
-  @media screen and (min-width: 500px) {
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-  }
-`
-
-const SmButtonWrapper = styled.div`
-  display: none;
-  @media (max-width: 500px) {
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-  }
-`
-
 const Header = (props) => {
-  const {selectedLayout, setSelectedLayout} = props
   const scrollTo = id => e => {
     e.preventDefault();
     console.log("id", id);
@@ -53,7 +31,6 @@ const Header = (props) => {
       containerId: id
     });
   };
-  console.log('selectedLayout: ', selectedLayout)
   return (
     <HeaderWrapper
       className="fixed-top"
@@ -70,40 +47,6 @@ const Header = (props) => {
           >
             LOGO
           </Navbar.Brand>
-          <ButtonWrapper>
-            <Button
-              style={{marginRight: '10px'}}
-              variant={selectedLayout === 'brand' ? 'primary' : 'outline-primary'}
-              size={"lg"}
-              onClick={() => setSelectedLayout('brand')}
-            >
-              Brands
-            </Button>
-            <Button
-              variant={selectedLayout === 'streamer' ? 'primary' : 'outline-primary'}
-              size="lg"
-              onClick={() => setSelectedLayout('streamer')}
-            >
-              Streamers
-            </Button>
-          </ButtonWrapper>
-          <SmButtonWrapper>
-            <Button
-              style={{marginRight: '10px'}}
-              variant={selectedLayout === 'brand' ? 'primary' : 'outline-primary'}
-              size={"sm"}
-              onClick={() => setSelectedLayout('brand')}
-            >
-              Brands
-            </Button>
-            <Button
-              variant={selectedLayout === 'streamer' ? 'primary' : 'outline-primary'}
-              size="sm"
-              onClick={() => setSelectedLayout('streamer')}
-            >
-              Streamers
-            </Button>
-          </SmButtonWrapper>
           <div id="basic-navbar-nav">
             <Nav>
               <Button

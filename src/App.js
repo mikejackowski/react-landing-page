@@ -50,23 +50,20 @@ const App = () => {
 
   return (
     <AppWrapper>
-      {
-      selectedLayout !== 'welcome' &&
-        <Header
+      <Header
         data-aos="fade-up"
         selectedLayout={selectedLayout}
         setSelectedLayout={setSelectedLayout}/>
-      }
       <MainWrapper>
         <Home />
-        {selectedLayout === 'welcome' &&
+        {/* {selectedLayout === 'welcome' &&
         <Welcome
           selectedLayout={selectedLayout}
           setSelectedLayout={setSelectedLayout}/>
         }
         {selectedLayout === 'streamer' &&
         <Streamers />}
-        {selectedLayout === 'brand' &&
+        {selectedLayout === 'brand' && */}
         <Brands />}
         <Contact />
       </MainWrapper>
