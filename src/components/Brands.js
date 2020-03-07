@@ -3,7 +3,6 @@ import { Section, SectionTitle, Box, BoxTitle, IconWrap, Text } from './Streamer
 
 import Demo from "./Icons/Demo";
 
-
 const Brands = () => {
   const width = window.innerWidth;
   return (
