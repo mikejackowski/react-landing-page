@@ -1,12 +1,13 @@
 import React from "react"
 import styled from 'styled-components'
 
-const Section = styled.section`
-  width: 100%;
-  height: 100%;
-  height: fit-content;
+import { GreySection, SectionTitle } from './common';
+import {CopyToClipboard} from 'react-copy-to-clipboard';
+import CopyIcon from './Icons/Copy';
+
+const ContactSection = styled(GreySection)`
+
   background-color: #f6f6f6;
-  padding: 2%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -14,56 +15,73 @@ const Section = styled.section`
   flex-direction: row;
 `
 
-const ContactText = styled.h3`
-  position: relative;
-  width: 100%;
-  font-size: 1.5em;
-  font-weight: 300;
-  padding: 2% 0;
-  color: #343a40;
-
-  &:after {
-    content: "";
-    width: 40%;
-    height: 0;
-    position: absolute;
-    bottom: -1px;
-    left: 30%;
-    border-bottom: 5px solid #007bff;
-    z-index: 2;
-  }
+const ContactSectionTitle = styled(SectionTitle)`
+  font-size: 2.5em;
+  margin: 5% auto 2% auto;
 `
 
+
 const FormWrapper = styled.div`
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
   width: 100%;
-  padding-top: 2%;
   justify-content: center;
   align-items: center;
+  padding-bottom: 5%;
 `
 
 const MailAddress = styled.p`
 color: #007bff;
-font-size: 1em;
+font-size: 3em;
+color: #28a745;
 
   &:hover {
-    font-size: 1.2em;
-    transition: font-size 0.5s;
+    font-weight: bold;
+    transition: font-weight 0.5s;
 }
 `
 
+const CopyIconWrapper = styled.div`
+  position: relative;
+  width: 70px;
+  padding-left: 5px;
+  height: 100%;
+`
 
-const Contact = () => (
-  <Section id="contact">
-    <ContactText>
-      Contact us:
-    </ContactText>
-    <FormWrapper>
-      <MailAddress><a href="mailto:streamers@streamzoom.io">streamers@streamzoom.io</a></MailAddress>
-      <MailAddress><a href="mailto:brands@streamzoom.io">brands@streamzoom.io</a></MailAddress>
-    </FormWrapper>
-  </Section>
-)
+const Tooltip = styled.div`
+  position: absolute;
+  top: -50px;
+  padding: 10px;
+  border-radius: 5px;
+  color: white;
+  background: black;
+`
+
+
+const Contact = () => {
+  const [showTooltip, setShowTooltip ] = React.useState(false);
+  const displayTooltip = () => {
+    setShowTooltip(true);
+    setTimeout(() => {
+      setShowTooltip(false);
+    }, 3000);
+  }
+  return (
+    <ContactSection id="contact">
+      <ContactSectionTitle>
+        Let's get in touch
+      </ContactSectionTitle>
+      <FormWrapper>
+        <MailAddress><a href="mailto:hi@streamzoom.io">hi@streamzoom.io</a></MailAddress>
+
+          <CopyToClipboard onCopy={() => displayTooltip()} text="hi@streamzoom.io">
+            <CopyIconWrapper>
+              <CopyIcon />
+              {showTooltip && <Tooltip data-aos="fade-up">Copied to clipboard!</Tooltip>}
+            </CopyIconWrapper>
+          </CopyToClipboard>
+      </FormWrapper>
+    </ContactSection>
+  )
+}
 
 export default Contact

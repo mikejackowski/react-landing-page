@@ -20,6 +20,12 @@ const HeaderWrapper = styled.header`
   max-width: 100vw;
 `
 
+const LogoWrapper = styled.div`
+  font-size: 2em;
+  letter-spacing: 0.05em;
+  font-family: 'Slabo', serif;
+`
+
 const Header = (props) => {
   const scrollTo = id => e => {
     e.preventDefault();
@@ -45,7 +51,7 @@ const Header = (props) => {
             onClick={scrollTo("home")}
             aria-label="Logo"
           >
-            LOGO
+            <LogoWrapper>stream<b>zoom.io</b></LogoWrapper>
           </Navbar.Brand>
           <div id="basic-navbar-nav">
             <Nav>

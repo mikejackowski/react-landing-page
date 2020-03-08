@@ -1,16 +1,17 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import AOS from "aos";
 import $ from "jquery";
 
 import Header from "./components/Header";
 import Home from "./components/Home";
-import Brands from "./components/Brands";
+import Metrics from "./components/Metrics";
 import Contact from "./components/Contact";
+import Growing from './components/Growing';
+import About from "./components/About";
+import Footer from "./components/Footer";
 
 import "aos/dist/aos.css";
 import "./assets/styles/main.scss";
-import Welcome from "./components/Welcome";
-import Streamers from "./components/Streamers";
 import styled from 'styled-components';
 
 const AppWrapper = styled.div`
@@ -30,7 +31,6 @@ const MainWrapper = styled.main`
 
 
 const App = () => {
-  const [selectedLayout, setSelectedLayout] = useState('welcome')
   useEffect(() => {
     AOS.init({ once: true });
 
@@ -51,21 +51,14 @@ const App = () => {
   return (
     <AppWrapper>
       <Header
-        data-aos="fade-up"
-        selectedLayout={selectedLayout}
-        setSelectedLayout={setSelectedLayout}/>
+        data-aos="fade-up"/>
       <MainWrapper>
         <Home />
-        {/* {selectedLayout === 'welcome' &&
-        <Welcome
-          selectedLayout={selectedLayout}
-          setSelectedLayout={setSelectedLayout}/>
-        }
-        {selectedLayout === 'streamer' &&
-        <Streamers />}
-        {selectedLayout === 'brand' && */}
-        <Brands />}
+        <Growing/>
+        <About/>
+        <Metrics />
         <Contact />
+        <Footer />
       </MainWrapper>
     </AppWrapper>
   );

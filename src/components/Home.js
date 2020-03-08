@@ -1,5 +1,5 @@
 import React from "react";
-
+import Typing from 'react-typing-animation';
 import styled from "styled-components";
 
 const Section = styled.section`
@@ -9,8 +9,8 @@ const Section = styled.section`
   opacity: 0.9;
   height: fit-content;
   width: 100%;
+
   box-sizing: border-box;
-  /* background: linear-gradient(to top, rgba(253, 253, 253, 0.3) 0%, rgba(193, 218, 255, 0.3) 100%); */
   background: linear-gradient(to top, rgba(193, 218, 255, 0.3) 0%, rgba(253, 253, 253, 0.3) 100%);
 
   &:after,
@@ -50,56 +50,49 @@ const Section = styled.section`
   }
 `;
 
-const LogoWrapper = styled.h1`
-  font-weight: 300;
+const TitleWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  width: 100%;
   text-align: center;
-  color: #fff;
-  font-size: 1em;
-  line-height: 1.55;
-  margin-bottom: 23px;
-  margin-right: 2%;
-
-  @media (min-width: 992px) {
-    font-size: 1.5em;
-    line-height: 1.39;
-    max-width: 1100px;
-    margin-bottom: 0;
-  }
-`;
-
-const Title = styled.h2`
-  max-width: 70%;
-  font-size: 1.2em;
-  font-weight: normal;
-  line-height: 1.83;
-  text-align: left;
-  color: black;
+  align-items: baseline;
 
   @media (min-width: 992px) {
     max-width: 70%;
   }
 `
 
+const Title = styled.h2`
+  font-size: 3em;
+  font-family: 'Slabo', serif;
+  letter-spacing: 0.05em;
+  font-weight: normal;
+  text-align: center;
+  color: black;
+  padding: 0;
+  margin: 0;
+`
+
 const SubTitle = styled.h3`
-  max-width: 70%;
-  font-size: 1.2em;
+  text-align: center !important;
+  width: 100%;
+  font-size: 1.6em;
   font-weight: normal;
   line-height: 1.83;
   text-align: left;
   color: #343a40;
+  margin: 0 auto;
 
   @media (min-width: 992px) {
     max-width: 70%;
   }
 `;
 
-const Logo = styled.img`
-  max-height: 100px;
-  padding: 10px;
-`
-
 const HeroWrapper = styled.div`
+  width: 80%;
+  margin: 0 auto;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
 
@@ -111,25 +104,24 @@ const HeroWrapper = styled.div`
 const Home = () => {
   return (
     <Section id="home">
-        <HeroWrapper>
-          <LogoWrapper data-aos="zoom-in">
-            <Logo src='https://brand.twitch.tv/assets/logos/svg/wordmark-extruded/purple.svg'/>
-          </LogoWrapper>
-          <Title
-            data-aos="fade-up"
-            data-aos-easing="ease"
-            data-aos-delay="400"
-          >
-            stream<b>zoom</b>.io
-          </Title>
-          <SubTitle
-            data-aos="fade-up"
-            data-aos-easing="ease"
-            data-aos-delay="400"
-          >
-            We're connecting streamers and advertisers the right way.
-          </SubTitle>
-        </HeroWrapper>
+      <HeroWrapper>
+        <TitleWrapper
+        data-aos="fade-up"
+        data-aos-easing="ease"
+        data-aos-delay="400"
+        >
+          <Title>stream<b>zoom.io</b></Title>
+        </TitleWrapper>
+        <TitleWrapper>
+          <Typing
+            className="headertext"
+            speed={1}>
+            <SubTitle>
+              We're connecting streamers and advertisers the right way.
+            </SubTitle>
+          </Typing>
+        </TitleWrapper>
+      </HeroWrapper>
     </Section>
   );
 };
