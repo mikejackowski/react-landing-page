@@ -1,6 +1,6 @@
 {
-  "name": "react-landing-page",
-  "version": "0.1.0",
+  "name": "streamzoom-io",
+  "version": "1.0",
   "private": true,
   "dependencies": {
     "aos": "^2.3.4",
